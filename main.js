@@ -20,5 +20,7 @@ function reversedWord(str) {
     const reverseArray = splitString.reverse();
     const joinArray = reverseArray.join("");
     return joinArray;
+    
 }
-
+const reversed = reversedWord("parola");
+console.log(reversed);

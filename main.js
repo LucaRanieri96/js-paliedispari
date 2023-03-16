@@ -12,7 +12,13 @@
     - Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo   avanti.   
 */
 
-// chiedo all'utente di inserire una parola e la scrivo in una costante
 
-const word = prompt("Inserisci una parola e ti dirò se è palindroma")
-    
+
+// funzione per invertire una parola
+function reversedWord(str) {
+    const splitString = str.split("");
+    const reverseArray = splitString.reverse();
+    const joinArray = reverseArray.join("");
+    return joinArray;
+}
+

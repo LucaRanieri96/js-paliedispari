@@ -37,3 +37,19 @@ if (word === revertedWord) {
 } else {
     console.log(`${word} non è palindroma`);
 }
+
+// • Pari e Dispari
+
+// l'utente sceglie pari o dispari
+const pariDispari = prompt("scegli se 'pari' o 'dispari'");
+console.log(pariDispari);
+// ora sceglie un numero da 1 a 5
+const number1_5 = parseInt(prompt("scegli un numero da 1 a 5"));
+console.log(number1_5);
+
+// genero un numero random da 1 a 5 per il computer ma usando una funzione
+
+function getRandomInt() {
+  return getRandomInt(5);
+}
+console.log(getRandomInt());

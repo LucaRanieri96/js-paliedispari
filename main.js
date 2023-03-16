@@ -49,7 +49,7 @@ console.log(number1_5);
 
 // genero un numero random da 1 a 5 per il computer ma usando una funzione
 
-function getRandomInt() {
-  return getRandomInt(5);
-}
-console.log(getRandomInt());
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+console.log(getRandomInt(5));

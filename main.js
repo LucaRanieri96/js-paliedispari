@@ -16,20 +16,20 @@
 
 // funzione per invertire una parola
 function reverseWord(str) {
-    const splitString = str.split("");
-    const reverseArray = splitString.reverse();
-    const joinArray = reverseArray.join("");
-    return joinArray; 
+  const splitString = str.split("");
+  const reverseArray = splitString.reverse();
+  const joinArray = reverseArray.join("");
+  return joinArray;
 }
 
 // tentativo Secondo metodo per invertire una parola
 
 function reverseWord2(str) {
-    const reverseString = "";
-    for (let index = str.length - 1; index >= 0; index--) {
-        string += str[index];   
-    }
-    return reverseString
+  const reverseString = "";
+  for (let index = str.length - 1; index >= 0; index--) {
+    string += str[index];
+  }
+  return reverseString;
 }
 
 // const reversed = reversedWord("parola");
@@ -44,9 +44,9 @@ const revertedWord = reverseWord(word);
 // ora imposto un if che mi controlla se la parola messa dall'utente è uguale alla stessa parola letta al contrario
 
 if (word === revertedWord) {
-    console.log(`${word} è palindroma`);
+  console.log(`${word} è palindroma`);
 } else {
-    console.log(`${word} non è palindroma`);
+  console.log(`${word} non è palindroma`);
 }
 
 // • Pari e Dispari
@@ -61,32 +61,27 @@ console.log(number1_5);
 // genero un numero random da 1 a 5 per il computer ma usando una funzione
 
 function getRandomInt(max) {
-    // altre operazioni
-    return Math.floor(Math.random() * max);
+  // altre operazioni
+  return Math.floor(Math.random() * max);
 }
 
 let numberPC = getRandomInt(MAX);
 
-
 console.log(getRandomInt(MAX));
 
-
 // sommo i due numeri e controllo se la somma è pari o dispari
-let sum = number1_5 + numberPC
+let sum = number1_5 + numberPC;
 
 // funzione per determinare se la somma è dispari o pari
-function isEven(number) {
-    // restituisce true se il numero è pari, false altrimenti
-    if (number % 2 === 0) {
-        return 'pari';
-    } else {
-        return 'dispari';
-    }
-  }
+function isEven(num) {
+  return num % 2 === 0;
+}
 
 // controllo se l'utente ha vinto o no
-if (isEven(sum) === pariDispari) {
-    console.log("Hai vinto!");
+if (isEven(sum) && pariDispari === "pari") {
+  console.log("Hai Vinto!"); 
+} else if (!isEven(sum) && pariDispari === "dispari") {
+  console.log("Hai Vinto!"); 
 } else {
-    console.log("Hai perso...");
+  console.log("Hai perso"); 
 }

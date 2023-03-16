@@ -12,15 +12,28 @@
     - Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo   avanti.   
 */
 
-
+// • Palindroma
 
 // funzione per invertire una parola
-function reversedWord(str) {
+function reverseWord(str) {
     const splitString = str.split("");
     const reverseArray = splitString.reverse();
     const joinArray = reverseArray.join("");
-    return joinArray;
-    
+    return joinArray; 
 }
-const reversed = reversedWord("parola");
-console.log(reversed);
+// const reversed = reversedWord("parola");
+// console.log(reversed);
+
+// chiedo all'utente la parola
+const word = prompt("Inserisci una parola da invertire");
+console.log(word);
+// questa parola la inserisco nella funzione che la inverte
+const revertedWord = reverseWord(word);
+
+// ora imposto un if che mi controlla se la parola messa dall'utente è uguale alla stessa parola letta al contrario
+
+if (word === revertedWord) {
+    console.log(`${word} è palindroma`);
+} else {
+    console.log(`${word} non è palindroma`);
+}

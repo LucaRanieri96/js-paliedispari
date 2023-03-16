@@ -63,9 +63,15 @@ console.log(getRandomInt(MAX));
 // sommo i due numeri e controllo se la somma è pari o dispari
 let sum = number1_5 + numberPC
 
-if ((sum % 2) == 0 && pariDispari === "pari"){
+// funzione per determinare se la somma è dispari o pari
+function isEven(number) {
+    // restituisce true se il numero è pari, false altrimenti
+    return number % 2 === 0;
+  }
+
+if (isEven(sum) && pariDispari === "pari"){
     console.log("Hai vinto!");
-} else if ((sum % 2) != 0 && pariDispari === "dispari"){
+} else if (!isEven(sum) && pariDispari === "dispari"){
     console.log("Hai vinto!");
 } else {
     console.log("Hai perso...");

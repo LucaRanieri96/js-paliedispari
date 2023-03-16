@@ -22,27 +22,15 @@ function reverseWord(str) {
     return joinArray; 
 }
 
-// "ragionamento per invertire la parola"
-// seconda funzione per invertire una parola
+// tentativo Secondo metodo per invertire una parola
 
-// -mi creo una nuova parola che sarà il palindromo della parola scelta dalla funzione
-   const string = ""
-/*-questa parola deve essere letta al contrario quindi devo cambiare la posizione delle sue lettere 
-    es: la posizione "n" deve diventare la posizione 0 e viceversa 
-    potrei usare un ciclo for(non while tanto le parole sono sempre "finite")? ma che ci metto dentro? */
-    string.length - 1 // sicuramente la lunghezza della parola
-
-    for (let index = string.length - 1; index < 0; index--) {
-        string += index   
+function reverseWord2(str) {
+    const reverseString = "";
+    for (let index = str.length - 1; index >= 0; index--) {
+        string += str[index];   
     }
-
-// -return "parola invertita"
-    return string;
-
-
-
-
-
+    return reverseString
+}
 
 // const reversed = reversedWord("parola");
 // console.log(reversed);
@@ -95,6 +83,7 @@ function isEven(number) {
         return 'dispari';
     }
   }
+
 // controllo se l'utente ha vinto o no
 if (isEven(sum) === pariDispari) {
     console.log("Hai vinto!");

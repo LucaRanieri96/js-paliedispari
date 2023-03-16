@@ -39,7 +39,7 @@ if (word === revertedWord) {
 }
 
 // • Pari e Dispari
-
+const MAX = 5; // recupera il dato da un server remoto
 // l'utente sceglie pari o dispari
 const pariDispari = prompt("scegli se 'pari' o 'dispari'");
 console.log(pariDispari);
@@ -50,6 +50,23 @@ console.log(number1_5);
 // genero un numero random da 1 a 5 per il computer ma usando una funzione
 
 function getRandomInt(max) {
+    // altre operazioni
     return Math.floor(Math.random() * max);
-  }
-console.log(getRandomInt(5));
+}
+
+let numberPC = getRandomInt(MAX);
+
+
+console.log(getRandomInt(MAX));
+
+
+// sommo i due numeri e controllo se la somma è pari o dispari
+let sum = number1_5 + numberPC
+
+if ((sum % 2) == 0 && pariDispari === "pari"){
+    console.log("Hai vinto!");
+} else if ((sum % 2) != 0 && pariDispari === "dispari"){
+    console.log("Hai vinto!");
+} else {
+    console.log("Hai perso...");
+}

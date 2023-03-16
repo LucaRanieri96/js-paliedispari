@@ -19,6 +19,12 @@ function reverseWord(str) {
     const splitString = str.split("");
     const reverseArray = splitString.reverse();
     const joinArray = reverseArray.join("");
+
+
+
+
+
+
     return joinArray; 
 }
 // const reversed = reversedWord("parola");
@@ -66,12 +72,14 @@ let sum = number1_5 + numberPC
 // funzione per determinare se la somma è dispari o pari
 function isEven(number) {
     // restituisce true se il numero è pari, false altrimenti
-    return number % 2 === 0;
+    if (number % 2 === 0) {
+        return 'pari';
+    } else {
+        return 'dispari';
+    }
   }
-
-if (isEven(sum) && pariDispari === "pari"){
-    console.log("Hai vinto!");
-} else if (!isEven(sum) && pariDispari === "dispari"){
+// controllo se l'utente ha vinto o no
+if (isEven(sum) === pariDispari) {
     console.log("Hai vinto!");
 } else {
     console.log("Hai perso...");
